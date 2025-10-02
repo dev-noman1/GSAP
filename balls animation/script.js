@@ -18,15 +18,11 @@ sequence.from("li", {
 
 
 const ballSequence = gsap.timeline(
-    { paused: true }
+    { paused: true, duration: 0.4 }
 );
 
 document.querySelector(".Toggle").addEventListener("click", () => {
-    if (ballSequence.reversed() || ballSequence.paused()) {
-        ballSequence.play();
-    } else {
-        ballSequence.reverse();
-    }
+    ballSequence.reversed() || ballSequence.paused() ? ballSequence.play(): ballSequence.reverse();
 });
 
 ballSequence
@@ -43,6 +39,10 @@ ballSequence
     }, "<")
     .to(".Toggle", {
         zIndex: 1,
+        backgroundColor: "#fff",
+        color: "#111",
+        fontSize: 20,
+        fontWeight: "bold"
     })
     .to(".ball-col-4", {
         x: -300
