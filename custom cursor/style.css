@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+body{
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+}
+.cursor {
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+  font-size: 8px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9;
+
+  display: flex;              /* flexbox use */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  text-align: center;
+}
+
+main{
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #a1a1a1a2;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+main .overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+main img{
+    height: 100%;
+    width: 100%;
+}
